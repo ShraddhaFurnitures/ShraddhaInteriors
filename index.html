@@ -1,194 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shraddha Interiors & Furnitures</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: #f5f5f5; color: #333; }
-
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+    }
     header {
-      background: linear-gradient(90deg, #000, #444);
-      color: #fff;
+      background: linear-gradient(90deg, #000, #333);
+      color: gold;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1.1rem; margin-top: 0.5rem; }
-
-    nav {
-      background: #222;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 0.8rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav a:hover { color: #ffd700; }
-
-    .hero {
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80') no-repeat center/cover;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 8px #000;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .hero h2 { font-size: 2.2rem; }
-    .hero p { margin-top: 1rem; font-size: 1.2rem; }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2.section-title {
-      text-align: center;
+      padding: 30px 10px;
       font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: #222;
+      font-weight: bold;
+      letter-spacing: 2px;
     }
-
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: gold;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 15px;
+      border: 2px solid gold;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    .gallery img {
+    .card {
+      background-color: #1b1b1b;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #000;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px gold;
+    }
+    .card a {
+      text-decoration: none;
+      color: white;
+    }
+    .card img {
       width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: 0.3s;
+      height: 200px;
+      object-fit: cover;
     }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .contact {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .contact h3 { font-size: 1.8rem; margin-bottom: 1rem; }
-    .contact p { margin: 0.5rem 0; }
-
     footer {
-      background: #111;
-      color: #ccc;
+      background-color: #000;
+      padding: 30px;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
     }
-
-    .social-icons {
-      margin-top: 1rem;
-    }
-
-    .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ffd700;
-    }
-
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
+    .socials {
+      margin-top: 10px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      gap: 15px;
+    }
+    .socials a img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid gold;
       transition: 0.3s;
     }
-
-    .whatsapp-button:hover { transform: scale(1.1); }
+    .socials a img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px gold;
+    }
+    @media(max-width:600px){
+      header{font-size:1.5rem;}
+      iframe{height:220px;}
+    }
   </style>
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <header>
-    <h1>Shraddha Interiors & Furnitures</h1>
-    <p>Professional Interior Designers | 50+ Years of Experience | 100+ Completed Projects</p>
+    SHRADDHA INTERIORS & FURNITURES
   </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="hero" id="home">
-    <h2>Transforming Spaces into Masterpieces</h2>
-    <p>We design your dream home with perfection and creativity.</p>
+  <!-- YouTube Section -->
+  <section>
+    <h2>🎥 Our Latest YouTube Work</h2>
+    <iframe src="https://www.youtube.com/embed/" title="Latest YouTube Video" allowfullscreen></iframe>
+    <p style="color:#ccc; margin-top:10px;">(Paste your latest YouTube video link after /embed/)</p>
   </section>
 
-  <section id="projects">
-    <h2 class="section-title">Our Interior Works</h2>
+  <!-- Project Sections -->
+  <section>
+    <h2>🏠 Our Premium Projects</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=60" alt="Living Room">
-      <img src="https://images.unsplash.com/photo-1600585154154-66c2c205d8c5?auto=format&fit=crop&w=600&q=60" alt="TV Unit">
-      <img src="https://images.unsplash.com/photo-1600607687920-4f2dd1d19991?auto=format&fit=crop&w=600&q=60" alt="Modular Kitchen">
-      <img src="https://images.unsplash.com/photo-1600607687947-3a2e4b2d9f5f?auto=format&fit=crop&w=600&q=60" alt="Bedroom">
-      <img src="https://images.unsplash.com/photo-1600607687835-c3a4d40a0b42?auto=format&fit=crop&w=600&q=60" alt="Sofa Design">
-      <img src="https://images.unsplash.com/photo-1600585153964-8b89e0d8f5c4?auto=format&fit=crop&w=600&q=60" alt="Office Interior">
+
+      <div class="card">
+        <a href="https://www.instagram.com/reel/DQWWQkdjFvf/?igsh=MTJ3NXJraDR2anR6ZA==">
+          <img src="https://i.imgur.com/OT0Z7bT.jpg" alt="TV Unit">
+          <h3>TV Unit Designs</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.instagram.com/p/DQWXVIFEjTk/?igsh=MXNtd2U5d3dxeDZoMA==">
+          <img src="https://i.imgur.com/ZElZ3Cq.jpg" alt="Bedroom">
+          <h3>Bedroom Interiors</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.instagram.com/p/DQWXQUpEjjq/?igsh=MW05Y3hmeW4wYnBtdg==">
+          <img src="https://i.imgur.com/5dMZk6I.jpg" alt="Modular Kitchen">
+          <h3>Modular Kitchen</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.instagram.com/p/DQWXiQ6jI76/?igsh=Z2oyZXh1Z2RkaGF4">
+          <img src="https://i.imgur.com/vGvOnCl.jpg" alt="Sofa Designs">
+          <h3>Sofa Designs</h3>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="https://www.instagram.com/p/DQWXbxUkvvV/?igsh=MXVnNHdzOWFyM244bg==">
+          <img src="https://i.imgur.com/wHzHBaS.jpg" alt="Office Interiors">
+          <h3>Office Interiors</h3>
+        </a>
+      </div>
+
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h3>Contact Us</h3>
-    <p><b>Owner:</b> Dnyaneshwar Panchal</p>
-    <p><b>Phone:</b> +91 9561192206 | +91 9579282206</p>
-    <p><b>Email:</b> shraddhafurnitures8@gmail.com</p>
-    <p><b>Address:</b> Shraddha Interiors & Furnitures, Pune, Maharashtra, India 412207</p>
-
-    <div class="social-icons">
-      <a href="https://wa.me/message/T5XQCCB4EDCPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/dnyaneshwar___panchal?igsh=MWxqOXB6MGpodTMxcA==" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/1C2zbe1hjJ/" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
-  </section>
-
+  <!-- Footer Section -->
   <footer>
-    © 1995 Shraddha Interiors & Furnitures | Designed by Dnyaneshwar Panchal
-  </footer>
+    <h3>Contact Us</h3>
+    <p>📞 +91 9561192206 | +91 9579282206</p>
+    <p>📧 shraddhafurnitures8@gmail.com</p>
+    <p>🏠 Shraddha Interiors & Furnitures, Pune, Maharashtra, India - 412207</p>
 
-  <a class="whatsapp-button" href="https://wa.me/message/T5XQCCB4EDCPM1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="socials">
+      <a href="https://wa.me/message/T5XQCCB4EDCPM1"><img src="https://www.instagram.com/p/DQWbdSHDB_Y/?igsh=MXY4YWFmMHdnbjVwOA==" alt="WhatsApp"></a>
+      <a href="https://www.instagram.com/dnyaneshwar___panchal?igsh=MWxqOXB6MGpodTMxcA=="><img src="https://www.instagram.com/p/DQWbdSHDB_Y/?igsh=MXY4YWFmMHdnbjVwOA==" alt="Instagram"></a>
+      <a href="https://www.facebook.com/share/1Bc66JTWgB/"><img src="https://www.instagram.com/p/DQWbdSHDB_Y/?igsh=MXY4YWFmMHdnbjVwOA==" alt="Facebook"></a>
+      <a href="https://www.youtube.com/@SHRADDHAFURNITURES"><img src="https://www.instagram.com/p/DQWbdSHDB_Y/?igsh=MXY4YWFmMHdnbjVwOA==" alt="YouTube"></a>
+    </div>
+
+    <p style="margin-top:15px; color:#777;">© 2025 Shraddha Interiors & Furnitures | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
-
